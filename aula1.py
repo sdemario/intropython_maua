@@ -2,7 +2,9 @@
 
 ## While ##
 
-a = 0
-while a < 10:
-    a = raw_input("digite numero")
+v = True
+while v:
+    a = int(raw_input("digite numero"))
+    v = a < 10
+    print v
 
