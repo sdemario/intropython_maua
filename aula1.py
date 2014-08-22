@@ -8,3 +8,8 @@ while v:
     v = a < 10
     print v
 
+
+break
+continue
+pass
+else
