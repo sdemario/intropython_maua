@@ -1,19 +1,9 @@
-# clausula IF ##
+# Funcoes #
 
-a = 10
-b = 20
+def minhafuncao(parametro:
+    print parametro
 
-if a > 10 and b > 10:
-    print "a e b Maior que 10"
+## Escreva uma funcao que some dois numeros
 
-if a > 10 or b > 10:
-    print "a ou b Maior que 10"
 
-if a >= 10:
-    print "a Maior  ou igual a 10"
-
-if a <= 10:
-    print "a Menor  ou igual a 10"
-
-if a == 10:
-    print "a  a 10"
+## dica: python meuarquivo.py
