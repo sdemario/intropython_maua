@@ -2,14 +2,7 @@
 
 ## While ##
 
-v = True
-while v:
-    a = int(raw_input("digite numero"))
-    v = a < 10
-    print v
+a = ['a', 'b', 'c', 'd', 'e,']
 
-
-break
-continue
-pass
-else
+for i in a:
+    print i
