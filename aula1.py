@@ -1,16 +1,27 @@
-print "Hello World!"
 
-#isto é um comentário em linha
+### VARIAVEIS ###
 
-'''
-Tipos:
-  - Numbers
-  - Strings
-  - Lists
-  - Dictionaries
-  - Tuples
-  - Files
-  - Sets, types, None, Booleans
+#Numbers
+a = 2
 
- * Fracamente Tipado
-'''
+#Strings
+b = "Hello World!"
+
+#Lists
+c = ['item 1', 'item 2', 3]
+
+#Dictionaries
+d = {'chave 1' : 'valor 1', 'chave 2': 2}
+
+#Tuples
+e = ('valor 1', 1)
+
+#Booleans
+f = True
+g = False
+
+#None
+h = None
+
+#Sets, types
+#Files
