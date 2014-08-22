@@ -9,10 +9,9 @@ def soma(num1, num2):
     resposta = num1 + num2
     return resposta
 
-print soma(2, 3)
-
-a = raw_input()
-b = raw_input()
+## FRACAMENTE TIPADO! ##
+a = int(raw_input())
+b = int(raw_input())
 
 print soma(a, b)
 
