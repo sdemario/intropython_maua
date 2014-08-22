@@ -11,5 +11,10 @@ def soma(num1, num2):
 
 print soma(2, 3)
 
+a = raw_input()
+b = raw_input()
+
+print soma(a, b)
+
 
 ## dica: python meuarquivo.py
