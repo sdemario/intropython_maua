@@ -16,3 +16,10 @@ list.reverse()
 ### Slice  ###
 
 print b[2:4]
+
+
+## Strings ##
+
+a = 'Minha String'
+print a[3]
+print a[0:5]
