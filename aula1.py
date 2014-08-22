@@ -1,1 +1,1 @@
-#Faca um programa que leia 3 notas e calcule a media delas
+# Faca um programa que verifique se um numero e par
