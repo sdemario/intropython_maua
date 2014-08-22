@@ -1,11 +1,10 @@
+# clausula IF ##
 
-### OPERACOES ###
+a = 10
 
-print (4 + 2)
-print (4 - 2)
-print (4 * 2)
-print (4 / 2)
-print (5 % 2)
-print (4 ** 2)
-print (5 // 2)
-
+if a > 10:
+    print "a Maior que 10"
+elif a < 10:
+    print "a Maior que 10"
+else
+    print "a Igual a 10"
