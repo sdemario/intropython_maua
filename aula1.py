@@ -2,7 +2,7 @@
 
 ## While ##
 
-a = ['a', 'b', 'c', 'd', 'e,']
+a = range(100)
 
 for i in a:
     print i
