@@ -1,6 +1,2 @@
-### LOOPS ##
-
-## While ##
-
-for i in range(100):
-    print i
+## faca um programa que leia notas de diversos alunos e calcule a media
+## a lista termina quando e digitado um numero negativo
