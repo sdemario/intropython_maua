@@ -2,6 +2,15 @@ print "Hello World!"
 
 #isto é um comentário em linha
 
-''' Isto é
-um comentário em bloco
+'''
+Tipos:
+  - Numbers
+  - Strings
+  - Lists
+  - Dictionaries
+  - Tuples
+  - Files
+  - Sets, types, None, Booleans
+
+ * Fracamente Tipado
 '''
