@@ -26,10 +26,18 @@ class Pessoa:
     def set_profissao(self, profissao):
         self.profissao = profissao
 
-p = Pessoa("Sheldon", 29)
+class Professor(Pessoa):
+    profissao = "Professor"
+    salario = 0
 
-print p.nome
-print p.idade
-p.set_profissao("Programador")
+    def set_salario(self, valor):
+        self.salario = valor
 
-print p.profissao
+
+p = Professor("Sheldon", 29)
+print p.salario
+
+p.set_salario(1000)
+print p.salario
+
+## Pessoa nao tem salario
