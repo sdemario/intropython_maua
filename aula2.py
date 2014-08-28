@@ -1,17 +1,11 @@
 '''
 
-CLASSES - CLASSE x INSTANCIA
+CLASSES - EXERCICIO
 ----------------------------
 
-- Classe
-  Em orientacao a objetos, uma classe e uma estrutura que abstrai um conjunto de
-  objetos com caracteristicas similares. [wikipedia]
-
-  - Estrutura da classe
-       - Construtores
-       - Destrutor
-       - Propriedades/Atributos
-       - Eventos/Metodos
+Escreva um metodo que retorne Verdadeiro se o aluno foi aprovado (media >= 5.0)
+ou Falso se o aluno foi reprovado (media < 5.0). Depois, no programa principal,
+imprima um status "Aprovado" ou "Reprovado".
 '''
 
 class Pessoa:
@@ -49,21 +43,35 @@ class Aluno(Pessoa):
         for i in self.notas:
             soma = soma + i
 
-        media = soma / len(self.notas)
+        media = soma / float(len(self.notas))
         return media
 
+    def aprovado(self):
+        if self.media() >= 5:
+            return True
+        else:
+            return False
 
+
+alunos = []
 a = Aluno("Aluno 1", 18)
 a.add_nota(5.0)
 a.add_nota(6.0)
-a.add_nota(6.0)
+a.add_nota(4.0)
+alunos.append(a)
 
-print "Media do aluno %s: %2.2f: " % (a.nome, a.media())
+b = Aluno("Aluno 2", 20)
+b.add_nota(8.0)
+b.add_nota(8.0)
+b.add_nota(8.0)
+alunos.append(b)
 
-'''
-EXERCICIO:
+c = Aluno("Aluno 3", 19)
+c.add_nota(4.0)
+c.add_nota(4.0)
+c.add_nota(4.0)
+alunos.append(c)
 
-Escreva um metodo que retorne Verdadeiro se o aluno foi aprovado (media >= 5.0)
-ou Falso se o aluno foi reprovado (media < 5.0). Depois, no programa principal,
-imprima um status "Aprovado" ou "Reprovado".
-'''
+for i in alunos:
+    resultado = "Aprovado" if i.aprovado() else "Reprovado"
+    print "Media do aluno %s: %2.2f - %s " % (i.nome, i.media(), resultado)
