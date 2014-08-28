@@ -18,7 +18,11 @@ class Pessoa:
     nome = "Nome da Pessoa"
     idade = 100
 
-p = Pessoa()
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+p = Pessoa("Sheldon", 29)
 
 print p.nome
 print p.idade
