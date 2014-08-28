@@ -1,11 +1,9 @@
 '''
 
-PYTHON INTEPRETER x SCRIPTS
+EXERCICIO NOTAS/MEDIA
 -----------------------------
 
- - Python Interpreter
- - Python scripts
-   $ python myscript.py
+Faca um programa que leia notas de diversos alunos e calcule a media
+a lista termina quando e digitado um numero negativo
 
-   $ ./myscript.py -> Se for executável
 '''
