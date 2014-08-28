@@ -1,16 +1,11 @@
 '''
 
-AULA PASSADA
+PYTHON INTEPRETER x SCRIPTS
 -----------------------------
 
- - Introdução ao Curso
- - Intrudução ao Python
- - Tipos
- - Operações
- - Principais Clausulas
- - Variáveis
- - Função
- - Listas
- - Loops
- - Introdução a módulos
+ - Python Interpreter
+ - Python scripts
+   $ python myscript.py
+
+   $ ./myscript.py -> Se for executável
 '''
