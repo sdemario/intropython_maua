@@ -13,9 +13,13 @@ import sys
 notas = []
 try:
     n = int(raw_input("digite a nota: "))
-except:
+except ValueError:
     print "Voce nao digitou um numero valido"
     sys.exit(-1)
+except TypeError:
+    print "Erro de tipo"
+finally:
+    print "Passarei por aqui em qualquer circunstancia"
 
 while n >= 0:
     notas.append(n)
