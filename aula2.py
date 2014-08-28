@@ -11,20 +11,18 @@ import sys
 
 
 notas = []
-try:
-    n = int(raw_input("digite a nota: "))
-except ValueError:
-    print "Voce nao digitou um numero valido"
-    sys.exit(-1)
-except TypeError:
-    print "Erro de tipo"
-finally:
-    print "Passarei por aqui em qualquer circunstancia"
+n = 0
 
 while n >= 0:
+    while True:
+        try:
+            n = int(raw_input("digite a nota: "))
+            break
+        except:
+            print "Voce nao digitou um numero valido"
     notas.append(n)
-    n = int(raw_input("digite a nota: "))
 
+notas.remove(-1)
 soma = 0
 for i in notas:
     soma = soma + i
