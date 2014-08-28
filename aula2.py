@@ -1,11 +1,10 @@
 '''
 
-TRATAMENTO DE ERROS E EXCECOES
+EXERCICIO FUNCAO
 ----------------------------
 
-try
-except
-finally
+Melhore o programa de notas escrevendo uma funcao que mostre a maior nota lida
+
 '''
 import sys
 
