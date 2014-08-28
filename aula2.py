@@ -1,6 +1,6 @@
 '''
 
-CLASSES - INTRODUCAO
+CLASSES - CLASSE x INSTANCIA
 ----------------------------
 
 - Classe
@@ -18,5 +18,7 @@ class Pessoa:
     nome = "Nome da Pessoa"
     idade = 100
 
-print Pessoa.nome
-print Pessoa.idade
+p = Pessoa()
+
+print p.nome
+print p.idade
