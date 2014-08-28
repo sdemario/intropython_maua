@@ -1,45 +1,31 @@
 '''
 
-EXERCICIO FUNCAO
+CLASSES - INTRODUCAO
 ----------------------------
 
-Melhore o programa de notas escrevendo uma funcao que mostre a maior nota lida
+- Programacao Orientada a Objetos
+  A orientação a objetos é um paradigma de análise, projeto e programação de
+  sistemas de software baseado na composição e interação entre diversas
+  unidades de software chamadas de objetos. [wikipedia]
+
+- Classe
+  Em orientação a objetos, uma classe é uma estrutura que abstrai um conjunto de
+  objetos com características similares. [wikipedia]
+
+  - Estrutura da classe
+       - Construtores
+       - Destrutor
+       - Propriedades/Atributos
+       - Eventos/Metodos
+
+  - Encapsulamento
+  - Herança
+  - Polimorfismo
+  - Associação
+    - Agregação
+    - Composição
+  - Classes abstratas e concretas
 
 '''
-import sys
 
 
-notas = []
-n = 0
-
-def maior_nota(lista):
-    maior = 0
-    for i in notas:
-        if i > maior:
-            maior = i
-
-    return i
-
-def media_notas(lista):
-    soma = 0
-    for i in notas:
-        soma = soma + i
-
-    media = soma / len(lista)
-    return media
-
-while n >= 0:
-    while True:
-        try:
-            n = int(raw_input("digite a nota: "))
-            break
-        except:
-            print "Voce nao digitou um numero valido"
-    notas.append(n)
-
-notas.remove(-1)
-
-media = media_notas(notas)
-maior = maior_nota(notas)
-
-print 'Media: %2.2f  Maior nota: %d ' % (media, maior)
