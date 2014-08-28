@@ -1,15 +1,22 @@
 '''
 
-EXERCICIO NOTAS/MEDIA
------------------------------
+TRATAMENTO DE ERROS E EXCECOES
+----------------------------
 
-Faca um programa que leia notas de diversos alunos e calcule a media
-a lista termina quando e digitado um numero negativo
-
+try
+except
+finally
 '''
+import sys
+
 
 notas = []
-n = int(raw_input("digite a nota: "))
+try:
+    n = int(raw_input("digite a nota: "))
+except:
+    print "Voce nao digitou um numero valido"
+    sys.exit(-1)
+
 while n >= 0:
     notas.append(n)
     n = int(raw_input("digite a nota: "))
