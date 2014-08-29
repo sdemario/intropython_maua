@@ -36,6 +36,10 @@ class Aluno(Pessoa):
         media = soma / float(len(self.notas))
         return media
 
+    def mostra_notas(self):
+        for i in self.notas:
+            print i
+
     def aprovado(self):
         if self.media() >= 5:
             return True
