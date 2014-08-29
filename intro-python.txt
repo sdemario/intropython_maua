@@ -1,0 +1,13 @@
+Python
+
+ - surgiu em 1991
+ - Objetivo: menos linhas e codigo bonito
+ - Multiplos Paradigmas:
+   - OO
+   - Imperativa
+   - Funcional
+ - Tipagem Dinamica
+ - Fracamente Tipada
+ - Gerenciamento de memoria
+   - Garbage Colector
+   - Reference Count
