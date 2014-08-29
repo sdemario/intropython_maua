@@ -25,23 +25,30 @@ class Aluno(Pessoa):
         Pessoa.__init__(self, nome, idade)
         self.notas = []
 
-    def add_nota(self, valor):
-        self.notas.append(valor)
+    def add_nota(self, titulo, valor):
+        nota = Nota(titulo, valor)
+        self.notas.append(nota)
 
     def media(self):
         soma = 0
         for i in self.notas:
-            soma = soma + i
+            soma = soma + i.nota
 
         media = soma / float(len(self.notas))
         return media
 
     def mostra_notas(self):
         for i in self.notas:
-            print i
+            print i.titulo, i.nota
 
     def aprovado(self):
         if self.media() >= 5:
             return True
         else:
             return False
+
+
+class Nota:
+    def __init__(self, titulo, nota):
+        self.titulo = titulo
+        self.nota = nota
