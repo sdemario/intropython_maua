@@ -1,9 +1,25 @@
 '''
 
-MOSTRAR DADOS
+EXERCICIO
 ----------------------------
 
-Queremos mostrar todas as notas dos alunos logo apos o seu resumo
+1 - Data de nascimento
+
+Faca uma alteracao no programa/clases para que ao inves da idade seja cadastrada
+a data de nascimento e o metodo idade retorne a idade calculada segundo a data
+de nascimento. Mostre na tela junto ao resumo de notas.
+
+DICA: modulo datetime
+     https://docs.python.org/2/library/datetime.html
+
+
+2 - Melhor aluno da turma
+
+Faca uma alteracao no programa para que todos os alunos e um professor sejam
+associados a uma turma e esta tenha um metodo que retorne o aluno com a melhor
+media.
+
+DICA: classe Turma
 '''
 
 from classes import Aluno
