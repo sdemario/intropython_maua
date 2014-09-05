@@ -1,20 +1,21 @@
 '''
 
-CONEXAO COM O BANCO DE DADOS (SQLITE)
+CLASSE DEVICE: CARREGANDO DADOS DO DB
 ------------------------
 
 '''
 
 import sqlite3
+from models import Device
 
 
 conn = sqlite3.connect('dados.db')
-db = conn.cursor()
 
+dev = Device(conn)
+print dev.name
 
-for row in db.execute("select * from device"):
-    print row
-
+dev.load(1)
+print dev.name
 
 
 conn.close()
