@@ -82,9 +82,9 @@ class Device:
 
 
 class Measure:
-    def __init__(self, dbconn):
+    def __init__(self, dbconn, device = None):
         self.id = 0
-        self.device = None
+        self.device = device
         self.temperature = None
         self.humidity = None
         self.date = None
@@ -93,3 +93,48 @@ class Measure:
 
         self.dbconn = dbconn
 
+    def load(self, id):
+        db = self.dbconn.cursor()
+        db.execute("SELECT * FROM measure WHERE id = ? ", (id, ))
+        row = db.fetchone()
+
+        if row:
+            self.id = row[0]
+            if not self.device:
+                self.device = Device(self.dbconn)
+                self.device.load(row[1])
+            elif self.device.id != row[1]:
+                self.device = Device(self.dbconn)
+                self.device.load(row[1])
+            self.temperature = row[2]
+            self.humidity = row[3]
+            self.date = row[4]
+            self.latitude = row[5]
+            self.longitude = row[6]
+
+
+    def _insert(self):
+        if not self.device:
+            raise Exception("Atributo device vazio")
+
+        db = self.dbconn.cursor()
+
+        stmt  = "INSERT INTO measure (id_device, temperature, humidity, date, "
+        stmt += "  latitude, longitude) "
+        stmt += "   VALUES (?, ?, ?, ?, ?, ?)"
+
+        db.execute(stmt,
+            (self.device.id,
+            self.temperature,
+            self.humidity,
+            self.date,
+            self.latitude,
+            self.longitude))
+
+        self.id = db.lastrowid
+        self.dbconn.commit()
+
+
+    def save(self):
+        if not self.id:
+            self._insert()
