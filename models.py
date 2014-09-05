@@ -60,3 +60,10 @@ class Device:
             self.id))
 
         self.dbconn.commit()
+
+
+    def save(self):
+        if self.id:
+            self._update()
+        else:
+            self._insert()

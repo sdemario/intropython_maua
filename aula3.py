@@ -1,6 +1,6 @@
 '''
 
-CLASSE DEVICE: CARREGANDO DADOS DO DB
+CLASSE DEVICE: SALVANDO DADOS NO DB
 ------------------------
 
 '''
@@ -13,10 +13,13 @@ conn = sqlite3.connect('dados.db')
 
 dev = Device(conn)
 
-dev.load(3)
+dev.name = "Device de Testes"
+dev.obs = "Teste de save"
+dev.save()
 
-dev.name = "Device update"
+raw_input("Tecle <Enter> para continuar")
 
-dev._update()
+dev.obs = "Teste de save: sucesso"
+dev.save()
 
 conn.close()
