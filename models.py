@@ -20,3 +20,22 @@ class Device:
             self.obs = row[2]
             self.latitude = row[3]
             self.longitude = row[4]
+
+
+    def _insert(self):
+        if not self.name:
+            raise Exception("Atributo nome vazio")
+
+        db = self.dbconn.cursor()
+
+        stmt  = "INSERT INTO device (name, obs, latitude, longitude) "
+        stmt += "   VALUES (?, ?, ?, ?)"
+
+        db.execute(stmt,
+            (self.name,
+            self.obs,
+            self.latitude,
+            self.longitude))
+
+        self.id = db.lastrowid
+        self.dbconn.commit()

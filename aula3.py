@@ -12,10 +12,8 @@ from models import Device
 conn = sqlite3.connect('dados.db')
 
 dev = Device(conn)
-print dev.name
+dev.name = 'Device Insert'
 
-dev.load(1)
-print dev.name
-
+dev._insert()
 
 conn.close()
