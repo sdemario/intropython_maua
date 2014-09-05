@@ -39,3 +39,24 @@ class Device:
 
         self.id = db.lastrowid
         self.dbconn.commit()
+
+
+    def _update(self):
+        db = self.dbconn.cursor()
+
+        stmt  = "UPDATE device set "
+        stmt += "    name = ?, "
+        stmt += "    obs = ?, "
+        stmt += "    latitude = ?, "
+        stmt += "    longitude = ? "
+        stmt += "WHERE "
+        stmt += "    id = ? "
+
+        db.execute(stmt,
+            (self.name,
+            self.obs,
+            self.latitude,
+            self.longitude,
+            self.id))
+
+        self.dbconn.commit()
