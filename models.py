@@ -67,3 +67,15 @@ class Device:
             self._update()
         else:
             self._insert()
+
+
+    def delete(self):
+        if not self.id:
+            return
+
+        db = self.dbconn.cursor()
+
+        stmt  = "DELETE FROM device WHERE id = ?"
+        db.execute(stmt, (self.id,))
+
+        self.dbconn.commit()

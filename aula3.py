@@ -1,6 +1,6 @@
 '''
 
-CLASSE DEVICE: SALVANDO DADOS NO DB
+CLASSE DEVICE: DELETANDO REGISTROS DO DB
 ------------------------
 
 '''
@@ -12,14 +12,15 @@ from models import Device
 conn = sqlite3.connect('dados.db')
 
 dev = Device(conn)
-
-dev.name = "Device de Testes"
-dev.obs = "Teste de save"
-dev.save()
-
-raw_input("Tecle <Enter> para continuar")
-
-dev.obs = "Teste de save: sucesso"
-dev.save()
+dev.load(3)
+dev.delete()
 
 conn.close()
+
+
+'''
+EXERCICIO:
+
+Implemente a classe Measure que contenha todos os seus atributos necessarios e
+persista seus dados no Banco de Dados
+'''
