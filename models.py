@@ -81,6 +81,28 @@ class Device:
         self.dbconn.commit()
 
 
+    def measures(self):
+        db = self.dbconn.cursor()
+
+        db.execute("SELECT * from MEASURE WHERE id_device = ? ", (self.id, ))
+
+        res = []
+        for row in db:
+            mea = Measure(self.dbconn, self)
+
+            mea.temperature = row[2]
+            mea.device = self
+            mea.humidity = row[3]
+            mea.date = row[4]
+            mea.latitude = row[5]
+            mea.longitude = row[6]
+
+            res.append(mea)
+
+        return res
+
+
+
 class Measure:
     def __init__(self, dbconn, device = None):
         self.id = 0
