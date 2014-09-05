@@ -79,3 +79,17 @@ class Device:
         db.execute(stmt, (self.id,))
 
         self.dbconn.commit()
+
+
+class Measure:
+    def __init__(self, dbconn):
+        self.id = 0
+        self.device = None
+        self.temperature = None
+        self.humidity = None
+        self.date = None
+        self.latitude = None
+        self.longitude = None
+
+        self.dbconn = dbconn
+
