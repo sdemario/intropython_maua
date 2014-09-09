@@ -102,6 +102,17 @@ class Device:
         return res
 
 
+    def to_dict(self):
+        res = {
+            "id": self.id,
+            "name": self.name,
+            "obs": self.obs,
+            "latitude": self.latitude,
+            "longitude": self.longitude }
+
+        return res
+
+
 
 class Measure:
     def __init__(self, dbconn, device = None):
@@ -119,7 +130,7 @@ class Measure:
     def to_dict(self):
         res = {
             "id": self.id,
-            "device": self.device,
+            "device": self.device.to_dict(),
             "temperature": self.temperature,
             "humidity": self.humidity,
             "date": self.date,
