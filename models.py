@@ -115,6 +115,20 @@ class Measure:
 
         self.dbconn = dbconn
 
+
+    def to_dict(self):
+        res = {
+            "id": self.id,
+            "device": self.device,
+            "temperature": self.temperature,
+            "humidity": self.humidity,
+            "date": self.date,
+            "latitude": self.latitude,
+            "longitude": self.longitude }
+
+        return res
+
+
     def load(self, id):
         db = self.dbconn.cursor()
         db.execute("SELECT * FROM measure WHERE id = ? ", (id, ))
