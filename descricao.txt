@@ -1,0 +1,15 @@
+Joao e dono de uma fabrica de sorvetes.
+
+Apos a producao dos picoles na fabrica, eles sao
+enviados para as lojas atraves de um caminhao refrigerado.
+
+Nas lojas sao armazenados em geladeiras proprias para a venda,
+com a porta transparente.
+
+Joao comecou a receber reclamacoes de seus clientes de
+algumas de suas lojas dizendo que os sorvetes estavam derretidos
+e queriam seu dinheiro de volta.
+
+Joao entao deseja ter um sistema que gere um alarme sempre que a
+temperatura de alguma geladeira e/ou caminhao baixe a menos de
+5 graus.
