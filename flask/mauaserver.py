@@ -26,5 +26,20 @@ def aluno_list():
 	return json.dumps(alunos)
 
 
+@app.route('/api/aluno/new', methods=['POST'])
+def aluno_new():
+	if not request.json:
+		return jsonify({'status': False})
+
+	p = request.get_json()
+	a = Aluno()
+	a.nome = p['nome']
+	a.idade = p['idade']
+	db.session.add(a)
+	db.session.commit()
+
+	return jsonify({'status:': True})
+
+
 if __name__ == '__main__':
 	app.run(debug=True)
